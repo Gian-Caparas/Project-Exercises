@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char name[50];
+    char first[99];
+    char second[99];
+    char last[99];
+   
+    printf("Enter your name: ");
+    fgets(name, sizeof(name), stdin);
+    size_t len = strlen(name);
+    if (len > 0 && name[len - 1] == '\n') {
+        name[len - 1] = '\0';
+    }
+  
+    printf("Enter your first: ");
+    fgets(first, sizeof(first), stdin);
+    len = strlen(first);
+    if (len > 0 && first[len - 1] == '\n') {
+        first[len - 1] = '\0';
+    }
+
+   
+    printf("Enter your second: ");
+    fgets(second, sizeof(second), stdin);
+    len = strlen(second);
+    if (len > 0 && second[len - 1] == '\n') {
+        second[len - 1] = '\0';
+    }
+
+   
+    printf("Enter your last: ");
+    fgets(last, sizeof(last), stdin);
+    len = strlen(last);
+    if (len > 0 && last[len - 1] == '\n') {
+        last[len - 1] = '\0';
+    }
+
+ 
+    printf("Hello, %s, %s, %s, %s", name, first, second, last);
+    
+    return 0;
+}
